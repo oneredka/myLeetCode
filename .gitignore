@@ -1,0 +1,9 @@
+# ignore IntelliJ IDEA project files
+*.iml
+.idea/
+
+# ignore output directory
+target/
+out/
+# ignore eclipse project related files
+*/target/
