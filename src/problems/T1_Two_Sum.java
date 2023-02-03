@@ -42,6 +42,5 @@ public class T1_Two_Sum {
         int[] result = solution(nums, target);
         System.out.println(result[0]);
         System.out.println(result[1]);
-
     }
 }
