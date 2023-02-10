@@ -20,7 +20,7 @@ import java.util.Map;
  * @author: louis
  * @date: 2023/2/3
  **/
-public class T1_Two_Sum {
+public class T1_TwoSum {
 
     public static int[] solution(int[] nums, int target) {
         int[] result = new int[2];

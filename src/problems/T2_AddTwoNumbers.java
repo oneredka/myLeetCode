@@ -20,7 +20,7 @@ package problems;
  * @author: louis
  * @date: 2023/2/3
  **/
-public class T2_Add_Two_Numbers {
+public class T2_AddTwoNumbers {
     public static class ListNode {
         int val;
         ListNode next;
@@ -38,7 +38,7 @@ public class T2_Add_Two_Numbers {
         }
     }
 
-    public static ListNode soultion(ListNode node1, ListNode node2) {
+    public static ListNode solution(ListNode node1, ListNode node2) {
         ListNode dummy = new ListNode();
         ListNode temp = dummy;
         int carry = 0;
@@ -71,7 +71,7 @@ public class T2_Add_Two_Numbers {
 
         ListNode l2 = new ListNode(5, null);
         l2.next = new ListNode(6, new ListNode(4, null));
-        ListNode result = soultion(l1, l2);
+        ListNode result = solution(l1, l2);
         System.out.println(result);
     }
 
