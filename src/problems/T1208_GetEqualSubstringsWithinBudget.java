@@ -28,16 +28,18 @@ package problems;
  **/
 public class T1208_GetEqualSubstringsWithinBudget {
 
+    // todo 对这个题和解法不理解
     public static int solution(String s, String t, int maxCost) {
-        int res = 0;
-        int sum = 0;
-        int right = 0;
-        int left = 0;
+        int res = 0, sum = 0, right = 0, left = 0;
         while (right < s.length()) {
             sum += Math.abs(s.charAt(right) - t.charAt(right));
-
+            if (sum > maxCost) {
+                sum -= Math.abs(s.charAt(left) - t.charAt(left));
+                left++;
+            }
+            right++;
+            res = Math.max(res, sum);
         }
-
         return res;
     }
 }
