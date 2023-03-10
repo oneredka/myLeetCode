@@ -2,7 +2,17 @@ package problems;
 
 /**
  * @className: T_704_BinarySearch
- * @description: TODO description
+ * @description:
+ * Given an array of integers nums which is sorted in ascending order, and an integer target,
+ * write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
+ * You must write an algorithm with O(log n) runtime complexity.
+ *
+ * 给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。
+ * Example 1:
+ *
+ * Input: nums = [-1,0,3,5,9,12], target = 9
+ * Output: 4
+ * Explanation: 9 exists in nums and its index is 4
  * @tag
  * @author: louis
  * @date: 2023/3/9
