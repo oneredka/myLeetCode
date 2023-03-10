@@ -20,7 +20,7 @@ package problems;
  * @author: louis
  * @date: 2023/2/3
  **/
-public class T2_AddTwoNumbers {
+public class T_2_AddTwoNumbers {
     public static class ListNode {
         int val;
         ListNode next;

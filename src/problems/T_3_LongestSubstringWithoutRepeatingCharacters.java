@@ -16,7 +16,7 @@ import java.util.Map;
  * @author: louis
  * @date: 2023/2/9
  **/
-public class T3_LongestSubstringWithoutRepeatingCharacters {
+public class T_3_LongestSubstringWithoutRepeatingCharacters {
 
     public static void main(String[] args) {
         System.out.println(solution("abcabcbb"));

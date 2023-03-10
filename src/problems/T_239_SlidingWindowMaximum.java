@@ -31,7 +31,7 @@ import java.util.LinkedList;
  * - @author: louis
  * - @date: 2023/2/16
  **/
-public class T239_SlidingWindowMaximum {
+public class T_239_SlidingWindowMaximum {
 
     public static void main(String[] args) {
         int[] nums = {1, 3, -1, -3, 5, 3, 6, 7};

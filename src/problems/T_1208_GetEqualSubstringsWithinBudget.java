@@ -26,7 +26,7 @@ package problems;
  * @author: louis
  * @date: 2023/2/10
  **/
-public class T1208_GetEqualSubstringsWithinBudget {
+public class T_1208_GetEqualSubstringsWithinBudget {
 
     // todo 对这个题和解法不理解
     public static int solution(String s, String t, int maxCost) {
