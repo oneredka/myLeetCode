@@ -6,7 +6,7 @@ package problems;
  * Given the head of a linked list, remove the nth node from the end of the list and return its head.
  * 给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。
  *
- * @tag
+ * @tag  链表 快慢指针
  * @author: louis
  * @date: 2023/5/19
  **/
