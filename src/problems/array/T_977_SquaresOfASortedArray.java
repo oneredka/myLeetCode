@@ -1,4 +1,4 @@
-package problems;
+package problems.array;
 
 /**
  * @className: T_977_SquaresOfASortedArray

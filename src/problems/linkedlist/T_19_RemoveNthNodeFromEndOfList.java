@@ -1,4 +1,6 @@
-package problems;
+package problems.linkedlist;
+
+import problems.linkedlist.ListNode;
 
 /**
  * @className: T_19_RemoveNthNodeFromEndOfList
