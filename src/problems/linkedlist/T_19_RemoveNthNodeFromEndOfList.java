@@ -1,6 +1,5 @@
 package problems.linkedlist;
 
-import problems.linkedlist.ListNode;
 
 /**
  * @className: T_19_RemoveNthNodeFromEndOfList
@@ -13,6 +12,13 @@ import problems.linkedlist.ListNode;
  * @date: 2023/5/19
  **/
 public class T_19_RemoveNthNodeFromEndOfList {
+    public static class ListNode {
+        int val;
+        ListNode next;
+        ListNode() {}
+        ListNode(int val) { this.val = val; }
+        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+    }
 
     public static ListNode test(ListNode node, int n) {
         ListNode pre = new ListNode(0);
