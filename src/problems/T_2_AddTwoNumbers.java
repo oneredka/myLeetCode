@@ -1,5 +1,7 @@
 package problems;
 
+import java.util.List;
+
 /**
  * @className: T2_Add_Two_Numbers
  * @description: You are given two non-empty linked lists representing two non-negative integers.
@@ -71,8 +73,92 @@ public class T_2_AddTwoNumbers {
 
         ListNode l2 = new ListNode(5, null);
         l2.next = new ListNode(6, new ListNode(4, null));
-        ListNode result = solution(l1, l2);
+        ListNode result = solution3(l1, l2);
         System.out.println(result);
     }
+
+    public static ListNode solution2(ListNode l1, ListNode l2) {
+        ListNode pre = new ListNode(0);
+        ListNode cur = pre;
+        int addN = 0;
+        while (l1 != null || l2 != null) {
+            int n1 =  null == l1 ? 0 : l1.val;
+            int n2 = null == l2 ? 0: l2.val;
+            int sum = n1 + n2 + addN;
+            if (sum > 9) {
+                addN = 1;
+                sum = sum - 10;
+            } else {
+                addN = 0;
+            }
+            if (null != l1) {
+                l1 = l1.next;
+            }
+            if (null != l2) {
+                l2 = l2.next;
+            }
+            cur.next = new ListNode(sum);
+            cur = cur.next;
+        }
+
+        if (addN == 1) {
+            cur.next = new ListNode(addN);
+        }
+        return pre.next;
+    }
+
+    public static ListNode solution3 (ListNode l1, ListNode l2) {
+        ListNode pre = new ListNode(0);
+        ListNode cur = pre;
+        int addN = 0;
+        int sum = 0;
+        while (null != l1 || null != l2) {
+            int x = null == l1 ? 0 : l1.val;
+            int y = null == l2 ? 0 : l2.val;
+            sum = x + y + addN;
+            addN = sum / 10;
+            sum = sum % 10;
+            cur.next = new ListNode(sum);
+            cur = cur.next;
+
+            if (null != l1) {
+                l1 = l1.next;
+            }
+
+            if (null != l2) {
+                l2 = l2.next;
+            }
+        }
+        if  (addN == 1) {
+            cur.next = new ListNode(addN);
+        }
+        return  pre.next;
+    }
+
+    public static ListNode solution4 (ListNode l1, ListNode l2) {
+        ListNode pre = new ListNode(0);
+        ListNode cur = pre;
+        int addN = 0;
+        int sum = 0;
+        while (null != l1 || null != l2 || addN != 0) {
+            int x = null == l1 ? 0 : l1.val;
+            int y = null == l2 ? 0 : l2.val;
+            sum = x + y + addN;
+            addN = sum / 10;
+            sum = sum % 10;
+            cur.next = new ListNode(sum);
+            cur = cur.next;
+
+            if (null != l1) {
+                l1 = l1.next;
+            }
+
+            if (null != l2) {
+                l2 = l2.next;
+            }
+        }
+        return  pre.next;
+    }
+
 
 }
