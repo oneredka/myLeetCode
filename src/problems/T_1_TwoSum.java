@@ -50,6 +50,7 @@ public class T_1_TwoSum {
     public static void main(String[] args) {
         int[] nums = {3, 2, 4};
         int target = 9;
+        //int[] result = solution(nums, target);
         int[] result = solution2(nums, target);
         System.out.println(result[0]);
         System.out.println(result[1]);
