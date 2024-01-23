@@ -47,6 +47,20 @@ public class T_1_TwoSum {
         return new int[0];
     }
 
+    public static int[] soulution3(int[] nums, int target) {
+        int[] result = new int[2];
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (map.containsKey(target - nums[i])) {
+                result[0] = map.get(target -nums[i]);
+                result[1] = i;
+                return result;
+            }
+            map.put(nums[i], i);
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         int[] nums = {3, 2, 4};
         int target = 9;
