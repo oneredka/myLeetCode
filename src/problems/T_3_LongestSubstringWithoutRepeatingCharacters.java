@@ -19,7 +19,7 @@ import java.util.Map;
 public class T_3_LongestSubstringWithoutRepeatingCharacters {
 
     public static void main(String[] args) {
-        System.out.println(solution("abcabcbb"));
+        System.out.println(solution2("pwwkew"));
     }
 
     public static int solution(String s){
@@ -49,6 +49,25 @@ public class T_3_LongestSubstringWithoutRepeatingCharacters {
             rightIndex++;
         }
         return maxLen;
+    }
+
+    public static int solution2(String s){
+        int left = 0;
+        int right = 0;
+        Map<Character, Integer> map = new HashMap<>();
+        int max = 0;
+        while (right < s.length()) {
+            char rightChar = s.charAt(right);
+            map.put(rightChar, map.getOrDefault(rightChar, 0) + 1);
+            while (map.get(rightChar) > 1) {
+                map.put(s.charAt(left) , map.get(s.charAt(left)) - 1);
+                left++;
+            }
+            max = Math.max(max, right - left + 1);
+            right++;
+        }
+
+        return max;
     }
 
 }
