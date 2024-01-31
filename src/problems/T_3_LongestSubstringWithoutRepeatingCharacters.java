@@ -1,5 +1,6 @@
 package problems;
 
+import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -61,6 +62,42 @@ public class T_3_LongestSubstringWithoutRepeatingCharacters {
             map.put(rightChar, map.getOrDefault(rightChar, 0) + 1);
             while (map.get(rightChar) > 1) {
                 map.put(s.charAt(left) , map.get(s.charAt(left)) - 1);
+                left++;
+            }
+            max = Math.max(max, right - left + 1);
+            right++;
+        }
+
+        return max;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public static int solution3(String s) {
+        HashMap<Character, Integer> map = new HashMap<>();
+        int left = 0;
+        int right = 0;
+        int max = 0;
+        while (right < s.length()) {
+            map.put(s.charAt(right), map.getOrDefault(s.charAt(right), 0) + 1);
+            while (map.get(s.charAt(right)) > 1) {
+                map.put(s.charAt(left), s.charAt(left) - 1);
                 left++;
             }
             max = Math.max(max, right - left + 1);
